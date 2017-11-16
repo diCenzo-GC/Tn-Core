@@ -1,5 +1,5 @@
-# Tn-Core_v1.0
+# Tn-Core
 
-A Matlab toolbox for generation of gene-centric, context-specific core metabolic network reconstructions through integration of experimental Tn-seq and RNA-seq datasets. The toolbox currently contains eight functions written in Matlab for use with COBRA formatted metabolic models, and is dependent upon functions of the COBRA Toolbox.
+Tn-Core4 is Matlab toolbox for generation of gene-centric, context-specific core metabolic network reconstructions through integration of experimental Tn-seq and RNA-seq datasets.
 
-To use the Tn-Core Toolbox, place all .m files of this repository within a directory included in the Matlab path. For a detailed description of each of the eight functions and their usage, please refer to the 'Tn-Core manual.pdf' file.
+The current version of the toolbox is version 1.0, and can be found in the folder Tn-Core-v1.0.

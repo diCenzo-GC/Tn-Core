@@ -5,3 +5,5 @@ The first (and current) version of the Tn-Core Toolbox. Tn-Core is a Matlab tool
 The toolbox currently contains eight functions written in Matlab for use with COBRA formatted metabolic models, and is dependent upon functions of the COBRA Toolbox.
 
 To use the Tn-Core Toolbox, place all .m files of this repository within a directory included in the Matlab path. For a detailed description of each of the eight functions and their usage, please refer to the 'Tn-Core-manual.pdf' file.
+
+Tn-Core v1.0 is distributed under a MIT license.

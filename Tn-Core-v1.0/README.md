@@ -6,4 +6,7 @@ The toolbox currently contains eight functions written in Matlab for use with CO
 
 To use the Tn-Core Toolbox, place all .m files of this repository within a directory included in the Matlab path. For a detailed description of each of the eight functions and their usage, please refer to the 'Tn-Core-manual.pdf' file.
 
+A pre-print of the manuscript describing Tn-Core can be found at:
+diCenzo GC, Mengoni A, Fondi M. 2017. Tn-Core: context-specific reconstruction of core metabolic models using Tn-seq data. bioRxiv. doi: 10.1101/221325
+
 Tn-Core v1.0 is distributed under a MIT license.

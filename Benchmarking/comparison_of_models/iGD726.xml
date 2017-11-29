@@ -15678,7 +15678,7 @@
 	</listOfReactants>
 	<listOfProducts>
 		<speciesReference species="cpdEPSi9_c0" stoichiometry="1"/>
-		<speciesReference species="cpd00014_c0" stoichiometry="1"/>
+		<speciesReference species="cpd00010_c0" stoichiometry="1"/>
 	</listOfProducts>
 	<kineticLaw>
 		<math xmlns="http://www.w3.org/1998/Math/MathML">

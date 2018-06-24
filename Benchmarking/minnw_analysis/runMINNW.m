@@ -161,11 +161,10 @@ iGD1575 = model;
 save('iGD1575.mat','iGD1575');
 clear;
 
-%% Run fastcore analysis
+%% Prepare a consistent model
 
 % Load the model
 load('iGD1575.mat');
-load('coreRxns.mat');
 
 % Run fastcc
 A = fastcc(iGD1575, 1.1e-6);
@@ -175,21 +174,25 @@ A = iGD1575.rxns(A);
 B = setdiff(iGD1575.rxns, A);
 iGD1575_consistent = removeRxns(iGD1575, B);
 
-% Identify core reactions
-coreRxns2 = intersect(coreRxns, iGD1575_consistent.rxns);
-coreReactions = findRxnIDs(iGD1575_consistent, coreRxns2);
-
-% Run fastcore
-finalRxns = fastcore(coreReactions, iGD1575_consistent, 1.1e-6);
-
-% Prepare core model
-finalRxns = iGD1575_consistent.rxns(finalRxns);
-rxnsToRemove = setdiff(iGD1575_consistent.rxns, finalRxns);
-coreModel_fastcore = removeRxns(iGD1575_consistent, rxnsToRemove);
-coreModel_fastcore = tncore_remove(coreModel_fastcore);
-
-% Save
-save('allFastcore_output.mat');
-clearvars -except coreModel*
-save('coreModel_fastcore.mat');
+% Save the model
+save('iGD1575_consistent.mat', 'iGD1575_consistent');
 clear;
+
+%% Run minNW and produce core model
+
+% Run minNW
+coreModel = FaMoRe_meliloti();
+
+% Load full model
+load('iGD1575_consistent.mat');
+
+% Produce core model with genes included
+rxnsToRemove = setdiff(iGD1575_consistent.rxns, coreModel.rxns);
+coreModel_minnw = removeRxns(iGD1575_consistent, rxnsToRemove);
+coreModel_minnw = tncore_remove(coreModel_minnw);
+
+% Save output
+save('minNW_allOutput.mat')
+save('coreModel_minnw.mat', 'coreModel_minnw');
+clear;
+

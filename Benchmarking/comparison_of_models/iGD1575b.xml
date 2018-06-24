@@ -50092,7 +50092,7 @@
 <reaction id="rxn12192"  name="protein synthesis reaction"  reversible="false">
 	<notes>
 		<html:p>GENE_ASSOCIATION:(smc00323 and smc00335 and smc00363 and smc00364 and smc01152 and smc04434 and smc00565 and smc00567 and smc00568 and smc01803 and smc01804 and smc01369 and smc01321 and smc01320 and smc01319 and smc01318 and smc01314 and smc01313 and smc01310 and smc01309 and smc01308 and smc01307 and smc01306 and smc01305 and smc01304 and smc01303 and smc01302 and smc01301 and smc01300 and smc01299 and smc01298 and smc01297 and smc01296 and smc01295 and smc01294 and smc01293 and smc01292 and smc01291 and smc01290 and smc01287 and smc01286 and smc01283 and smc02101 and smc00485 and smc04320 and smc02692 and smc00704 and smc03990 and smc04003 and smc03934 and smc03770 and smc03772 and smc03859 and smc03863 and smc03881 and (smc02676 or smc02675 or smc03222) and (smc02668 or smc02462 or smc03220) and (smc02669 or smc02535 or smc03221))</html:p>
-		<html:p>PROTEIN_ASSOCIATION:(rpsO and rpsA and rpmI and rplT and rpsT and rpmH and rplI and rpsR and rpsF and rpsI and rplM and rpmG and rplK and rplA and rplJ and rplL and rpsL and rpsG and rpsJ and rplC and rplD and rplW and rplB and rpsS and rplV and rpsC and rplP and rpmC and rpsQ and rplN and rplX and rplE and rpsN and rpsH and rplF and rplR and rpsE and rpmD and rplO and rpsM and rpsK and rplQ and rpsB and rpsD and rpsU and rplY and rpmB and rpmE and rpmJ and rpsU and rplU and rpmA and rpsP and rplS and rpmF)</html:p>
+		<html:p>PROTEIN_ASSOCIATION:(rpsO and rpsA and rpmI and rplT and rpsT and rpmH and rplI and rpsR and rpsF and rpsI and rplM and rpmG and rplK and rplA and rplJ and rplL and rpsL and rpsG and rpsJ and rplC and rplD and rplW and rplB and rpsS and rplV and rpsC and rplP and rpmC and rpsQ and rplN and rplX and rplE and rpsN and rpsH and rplF and rplR and rpsE and rpmD and rplO and rpsM and rpsK and rplQ and rpsB and rpsD and rpsU and rplY and rpmB and rpmE and rpmJ and rpsU and rplU and rpmA and rpsP and rplS and rpmF and (rRNA and rRNA and rRNA) and (rRNA and rRNA and rRNA) and (rRNA and rRNA and rRNA))</html:p>
 	</notes>
 	<listOfReactants>
 		<speciesReference  species="cpd01326_c0"  stoichiometry="319"/>		
@@ -50902,6 +50902,34 @@
 	<listOfProducts>
 		<speciesReference species="cpd00018_c0" stoichiometry="1"/>
 		<speciesReference species="cpd12848_c0" stoichiometry="1"/>
+	</listOfProducts>
+	<kineticLaw>
+		<math xmlns="http://www.w3.org/1998/Math/MathML">
+			<ci> FLUX_VALUE </ci>
+		</math>
+		<listOfParameters>
+			<parameter id="LOWER_BOUND" value="0" units="mmol_per_gDW_per_hr"/>
+			<parameter id="UPPER_BOUND" value="1000" units="mmol_per_gDW_per_hr"/>
+			<parameter id="OBJECTIVE_COEFFICIENT" value="0"/>
+			<parameter id="FLUX_VALUE" value="0.000000" units="mmol_per_gDW_per_hr"/>
+		</listOfParameters>
+	</kineticLaw>
+</reaction>
+
+<reaction id="rxnFADH2" name="FADH2 dependent ubiquinone reduction" reversible="false">
+	<notes>
+		<html:p>GENE_ASSOCIATION: </html:p>
+		<html:p>PROTEIN_ASSOCIATION: </html:p>
+		<html:p>KEGG_RID: </html:p>
+		<html:p>PROTEIN_CLASS: </html:p>
+	</notes>
+	<listOfReactants>
+		<speciesReference species="cpd00982_c0" stoichiometry="1"/>
+		<speciesReference species="cpd15560_c0" stoichiometry="1"/>
+	</listOfReactants>
+	<listOfProducts>
+		<speciesReference species="cpd15561_c0" stoichiometry="1"/>
+		<speciesReference species="cpd00015_c0" stoichiometry="1"/>
 	</listOfProducts>
 	<kineticLaw>
 		<math xmlns="http://www.w3.org/1998/Math/MathML">

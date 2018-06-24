@@ -1,6 +1,16 @@
 %% Initialize matlab
 
-clear;
+clear all
+addpath(genpath('../../software/cobratoolbox/'));
+rmpath(genpath('../../software/cobratoolbox/external/libSBML-5.13.0-matlab_old'));
+addpath(genpath('../../software/cobratoolbox/external/libSBML-5.13.0-matlab_old'));
+addpath(genpath('../../software/tiger/'));
+addpath(genpath('../../software/TnCore/'));
+addpath(genpath('../../software/FastCore/'));
+initCobraToolbox;
+changeCobraSolver('gurobi', 'all');
+rmpath(genpath('../../software/FastCore/'));
+addpath(genpath('../../software/FastCore/'));
 
 %% Prepare original models
 
@@ -13,10 +23,10 @@ load('iGD726.mat');
 load('coreModelA.mat');
 load('coreModelB.mat');
 load('coreModelC.mat');
-load('coreModelD.mat');
 load('coreModel_fastcore.mat');
 load('coreModel_gimme.mat');
 load('coreModel_minnw.mat');
+load('coreModel_gimme_rna.mat');
 
 %% Compare gene essentialities
 
@@ -26,10 +36,10 @@ iGD726_grRatio = singleGeneDeletion(iGD726, 'MOMA');
 coreModelA_grRatio = singleGeneDeletion(coreModelA, 'MOMA');
 coreModelB_grRatio = singleGeneDeletion(coreModelB, 'MOMA');
 coreModelC_grRatio = singleGeneDeletion(coreModelC, 'MOMA');
-coreModelD_grRatio = singleGeneDeletion(coreModelD, 'MOMA');
 coreModel_fastcore_grRatio = singleGeneDeletion(coreModel_fastcore, 'MOMA');
 coreModel_gimme_grRatio = singleGeneDeletion(coreModel_gimme, 'MOMA');
 coreModel_minnw_grRatio = singleGeneDeletion(coreModel_minnw, 'MOMA');
+coreModel_gimme_rna_grRatio = singleGeneDeletion(coreModel_gimme_rna, 'MOMA');
 
 % List of genes of interest
 carbonGenes = {'smc03070'; 'smc03069'; 'smc03153'; 'smc04262'; 'smc00152'; ...
@@ -46,10 +56,10 @@ iGD726_IDs = findGeneIDs(iGD726, carbonGenes);
 coreModelA_IDs = findGeneIDs(coreModelA, carbonGenes);
 coreModelB_IDs = findGeneIDs(coreModelB, carbonGenes);
 coreModelC_IDs = findGeneIDs(coreModelC, carbonGenes);
-coreModelD_IDs = findGeneIDs(coreModelD, carbonGenes);
 coreModel_fastcore_IDs = findGeneIDs(coreModel_fastcore, carbonGenes);
 coreModel_gimme_IDs = findGeneIDs(coreModel_gimme, carbonGenes);
 coreModel_minnw_IDs = findGeneIDs(coreModel_minnw, carbonGenes);
+coreModel_gimme_rna_IDs = findGeneIDs(coreModel_gimme_rna, carbonGenes);
 
 % Get the data
 for n = 1:length(carbonGenes)
@@ -84,22 +94,16 @@ for n = 1:length(carbonGenes)
         outputCompared{n,5} = -1;
     end     
     
-    if coreModelD_IDs(n) ~= 0
-        outputCompared{n,6} = round(coreModelD_grRatio(coreModelD_IDs(n)),3);
+    if coreModel_fastcore_IDs(n) ~= 0
+        outputCompared{n,6} = round(coreModel_fastcore_grRatio(coreModel_fastcore_IDs(n)),3);
     else
         outputCompared{n,6} = -1;
-    end     
-
-    if coreModel_fastcore_IDs(n) ~= 0
-        outputCompared{n,7} = round(coreModel_fastcore_grRatio(coreModel_fastcore_IDs(n)),3);
-    else
-        outputCompared{n,7} = -1;
     end   
     
     if coreModel_gimme_IDs(n) ~= 0
-        outputCompared{n,9} = round(coreModel_gimme_grRatio(coreModel_gimme_IDs(n)),3);
+        outputCompared{n,7} = round(coreModel_gimme_grRatio(coreModel_gimme_IDs(n)),3);
     else
-        outputCompared{n,9} = -1;
+        outputCompared{n,7} = -1;
     end     
     
     if coreModel_minnw_IDs(n) ~= 0
@@ -108,11 +112,17 @@ for n = 1:length(carbonGenes)
         outputCompared{n,8} = -1;
     end   
     
+    if coreModel_gimme_rna_IDs(n) ~= 0
+        outputCompared{n,9} = round(coreModel_gimme_rna_grRatio(coreModel_gimme_rna_IDs(n)),3);
+    else
+        outputCompared{n,9} = -1;
+    end     
+    
 end
 
 % Add labels
 headers = {'Gene', 'iGD1575', 'iGD726', 'coreModelA', 'coreModelB', ...
-    'coreModelC', 'coreModelD', 'fastcore' , 'minNW', 'gimme'};
+    'coreModelC', 'fastcore' , 'gimme', 'minNW', 'gimme_rna'};
 outputCompared = horzcat(carbonGenes, outputCompared);
 outputCompared = vertcat(headers, outputCompared);
 outputCompared = transpose(outputCompared);
@@ -127,7 +137,3 @@ writetable(toExport, 'carbonGenesCompared.xlsx', 'WriteVariableNames', false);
 
 % Clear
 clear;
-
-
-
-

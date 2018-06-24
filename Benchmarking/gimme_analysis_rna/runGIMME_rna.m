@@ -161,35 +161,87 @@ iGD1575 = model;
 save('iGD1575.mat','iGD1575');
 clear;
 
-%% Run fastcore analysis
+%% Prepare the expression data
 
-% Load the model
+% Load inputs
 load('iGD1575.mat');
-load('coreRxns.mat');
+load('inputVariables.mat');
 
-% Run fastcc
-A = fastcc(iGD1575, 1.1e-6);
+% Pull out just model genes and data
+genes = iGD1575.genes;
+modelExpress = cell(length(genes),1);
+for n = 1:length(genes)
+    for m = 1:length(rnaseq)
+        if strmatch(genes{n},rnaseq{m,2},'exact')
+            modelExpress{n} = rnaseq{m};
+        end
+    end
+    if isempty(modelExpress{n})
+        modelExpress{n} = 0;
+    end
+end
+iGD1575_express = modelExpress;
+iGD1575_genes = genes;
 
-% Make the consistent model
-A = iGD1575.rxns(A);
-B = setdiff(iGD1575.rxns, A);
-iGD1575_consistent = removeRxns(iGD1575, B);
+% Determine expression threshold
+expressThresh = sum(cell2mat(rnaseq(:,1))) / 5000;
 
-% Identify core reactions
-coreRxns2 = intersect(coreRxns, iGD1575_consistent.rxns);
-coreReactions = findRxnIDs(iGD1575_consistent, coreRxns2);
+% Save expression data
+save('iGD1575_express.mat', 'iGD1575_express', 'iGD1575_genes', 'expressThresh');
+clear;
 
-% Run fastcore
-finalRxns = fastcore(coreReactions, iGD1575_consistent, 1.1e-6);
+%% Run the GIMME analyses
 
-% Prepare core model
-finalRxns = iGD1575_consistent.rxns(finalRxns);
-rxnsToRemove = setdiff(iGD1575_consistent.rxns, finalRxns);
-coreModel_fastcore = removeRxns(iGD1575_consistent, rxnsToRemove);
-coreModel_fastcore = tncore_remove(coreModel_fastcore);
+% Load models and expression data
+load('iGD1575.mat');
+load('iGD1575_express.mat');
 
-% Save
-save('allFastcore_output.mat');
-clearvars -except coreModel*
-save('coreModel_fastcore.mat');
+% Initiate tiger
+start_tiger('gurobi');
+iGD1575_tiger = cobra_to_tiger(iGD1575);
+
+% Prepare expression data
+iGD1575_express = cell2mat(iGD1575_express);
+
+% Run GIMME
+[GENE_STATES_iGD1575, GENES_iGD1575, SOL_iGD1575, TIGER_iGD1575] = ...
+    tncore_gimme(iGD1575_tiger, iGD1575_express, expressThresh, ...
+    iGD1575_genes, 0.5);
+
+%% Rebuild the core model in COBRA format
+
+isPresent = logical(GENE_STATES_iGD1575);
+genesToDelete = GENES_iGD1575(~isPresent);
+[coreModel,~,constrRxnNames] = deleteModelGenes(iGD1575, genesToDelete);
+testSol = optimizeCbModel(coreModel);
+origSol = optimizeCbModel(iGD1575);
+if testSol.f < 0.5 * origSol.f
+    for n = 1:length(genesToDelete)
+        geneID = findGeneIDs(iGD1575, genesToDelete{n,1});
+        genesToDelete{n,2} = iGD1575_express(geneID);
+    end
+end
+genesToDelete = sortrows(genesToDelete,2);
+tempModel = iGD1575;
+allRxnsToRemove = {};
+allNewGenesToDelete = {};
+for n = 1:length(genesToDelete)
+    [~,~,constrRxnNames] = deleteModelGenes(tempModel, genesToDelete{n,1});
+    testModel = removeRxns(tempModel, constrRxnNames);
+    testSol = optimizeCbModel(testModel);
+    if testSol.f >= 0.5 * origSol.f
+        [tempModel,~,constrRxnNames] = deleteModelGenes(tempModel, genesToDelete{n,1});
+        allRxnsToRemove = vertcat(allRxnsToRemove, constrRxnNames);
+        allNewGenesToDelete = vertcat(allNewGenesToDelete, genesToDelete{n,1});
+    end
+end
+[tempModel,~,constrRxnNames] = deleteModelGenes(iGD1575, allNewGenesToDelete);
+tempModel = removeRxns(tempModel, constrRxnNames);
+coreModel_gimme_rna = tncore_delete(tempModel);
+
+%% Save everything
+
+save('gimme_rna_output.mat');
+clearvars -except coreModel_gimme_rna;
+save('coreModel_gimme_rna.mat');
 clear;

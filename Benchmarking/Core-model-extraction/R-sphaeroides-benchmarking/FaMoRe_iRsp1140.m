@@ -1,0 +1,377 @@
+function subnetworks = FaMoRe_meliloti()
+%% Initial stuff
+
+% Original Network
+model = load('iRsp1140_consistent.mat');
+load('iRsp1140_consistent.mat')
+
+% Get maximal growth rate
+sol = optimizeCbModel(iRsp1140_consistent, 'max');
+
+% Number of functionalities
+n_functionalities = 1;
+
+%% Protected metabolites
+
+prot_mets = [];
+
+%% Protected Reactions
+
+prot_rxns = [{'RXN0001'};
+{'RXN0002'};
+{'RXN0003'};
+{'RXN0005'};
+{'RXN0006'};
+{'RXN0007'};
+{'RXN0008'};
+{'RXN0009'};
+{'RXN0010'};
+{'RXN0011'};
+{'RXN0012'};
+{'RXN0013'};
+{'RXN0014'};
+{'RXN0017'};
+{'RXN0018'};
+{'RXN0019'};
+{'RXN0021'};
+{'RXN0022'};
+{'RXN0023'};
+{'RXN0024'};
+{'RXN0025'};
+{'RXN0026'};
+{'RXN0028'};
+{'RXN0029'};
+{'RXN0031'};
+{'RXN0038'};
+{'RXN0039'};
+{'RXN0040'};
+{'RXN0041'};
+{'RXN0042'};
+{'RXN0043'};
+{'RXN0044'};
+{'RXN0045'};
+{'RXN0046'};
+{'RXN0048'};
+{'RXN0053'};
+{'RXN0054'};
+{'RXN0055'};
+{'RXN0056'};
+{'RXN0057'};
+{'RXN0058'};
+{'RXN0059'};
+{'RXN0060'};
+{'RXN0061'};
+{'RXN0062'};
+{'RXN0064'};
+{'RXN0065'};
+{'RXN0066'};
+{'RXN0067'};
+{'RXN0068'};
+{'RXN0069'};
+{'RXN0070'};
+{'RXN0071'};
+{'RXN0072'};
+{'RXN0073'};
+{'RXN0074'};
+{'RXN0075'};
+{'RXN0076'};
+{'RXN0079'};
+{'RXN0080'};
+{'RXN0082'};
+{'RXN0083'};
+{'RXN0084'};
+{'RXN0086'};
+{'RXN0088'};
+{'RXN0089'};
+{'RXN0091'};
+{'RXN0092'};
+{'RXN0094'};
+{'RXN0095'};
+{'RXN0096'};
+{'RXN0097'};
+{'RXN0098'};
+{'RXN0099'};
+{'RXN0100'};
+{'RXN0107'};
+{'RXN0110'};
+{'RXN0111'};
+{'RXN0112'};
+{'RXN0113'};
+{'RXN0114'};
+{'RXN0115'};
+{'RXN0116'};
+{'RXN0117'};
+{'RXN0118'};
+{'RXN0119'};
+{'RXN0122'};
+{'RXN0123'};
+{'RXN0124'};
+{'RXN0125'};
+{'RXN0127'};
+{'RXN0128'};
+{'RXN0129'};
+{'RXN0130'};
+{'RXN0132'};
+{'RXN0134'};
+{'RXN0137'};
+{'RXN0138'};
+{'RXN0139'};
+{'RXN0142'};
+{'RXN0143'};
+{'RXN0144'};
+{'RXN0145'};
+{'RXN0146'};
+{'RXN0147'};
+{'RXN0148'};
+{'RXN0149'};
+{'RXN0150'};
+{'RXN0153'};
+{'RXN0154'};
+{'RXN0155'};
+{'RXN0159'};
+{'RXN0160'};
+{'RXN0161'};
+{'RXN0162'};
+{'RXN0163'};
+{'RXN0166'};
+{'RXN0167'};
+{'RXN0170'};
+{'RXN0172'};
+{'RXN0173'};
+{'RXN0192'};
+{'RXN0194'};
+{'RXN0196'};
+{'RXN0213'};
+{'RXN0217'};
+{'RXN0219'};
+{'RXN0222'};
+{'RXN0223'};
+{'RXN0224'};
+{'RXN0225'};
+{'RXN0226'};
+{'RXN0227'};
+{'RXN0239'};
+{'RXN0240'};
+{'RXN0241'};
+{'RXN0242'};
+{'RXN0243'};
+{'RXN0244'};
+{'RXN0245'};
+{'RXN0246'};
+{'RXN0247'};
+{'RXN0248'};
+{'RXN0249'};
+{'RXN0251'};
+{'RXN0252'};
+{'RXN0253'};
+{'RXN0254'};
+{'RXN0255'};
+{'RXN0256'};
+{'RXN0257'};
+{'RXN0258'};
+{'RXN0259'};
+{'RXN0262'};
+{'RXN0263'};
+{'RXN0264'};
+{'RXN0265'};
+{'RXN0266'};
+{'RXN0267'};
+{'RXN0268'};
+{'RXN0269'};
+{'RXN0270'};
+{'RXN0271'};
+{'RXN0272'};
+{'RXN0273'};
+{'RXN0274'};
+{'RXN0275'};
+{'RXN0276'};
+{'RXN0277'};
+{'RXN0278'};
+{'RXN0279'};
+{'RXN0280'};
+{'RXN0281'};
+{'RXN0282'};
+{'RXN0283'};
+{'RXN0285'};
+{'RXN0286'};
+{'RXN0287'};
+{'RXN0288'};
+{'RXN0289'};
+{'RXN0290'};
+{'RXN0291'};
+{'RXN0292'};
+{'RXN0293'};
+{'RXN0294'};
+{'RXN0295'};
+{'RXN0296'};
+{'RXN0297'};
+{'RXN0301'};
+{'RXN0302'};
+{'RXN0303'};
+{'RXN0304'};
+{'RXN0305'};
+{'RXN0306'};
+{'RXN0307'};
+{'RXN0309'};
+{'RXN0310'};
+{'RXN0312'};
+{'RXN0315'};
+{'RXN0316'};
+{'RXN0317'};
+{'RXN0318'};
+{'RXN0319'};
+{'RXN0320'};
+{'RXN0322'};
+{'RXN0323'};
+{'RXN0324'};
+{'RXN0325'};
+{'RXN0326'};
+{'RXN0327'};
+{'RXN0328'};
+{'RXN0329'};
+{'RXN0330'};
+{'RXN0332'};
+{'RXN0334'};
+{'RXN0335'};
+{'RXN0336'};
+{'RXN0343'};
+{'RXN0345'};
+{'RXN0351'};
+{'RXN0355'};
+{'RXN0356'};
+{'RXN0357'};
+{'RXN0359'};
+{'RXN0360'};
+{'RXN0362'};
+{'RXN0363'};
+{'RXN0364'};
+{'RXN0365'};
+{'RXN0366'};
+{'RXN0367'};
+{'RXN0368'};
+{'RXN0371'};
+{'RXN0372'};
+{'RXN0373'};
+{'RXN0375'};
+{'RXN0376'};
+{'RXN0377'};
+{'RXN0378'};
+{'RXN0384'};
+{'RXN0385'};
+{'RXN0386'};
+{'RXN0387'};
+{'RXN0388'};
+{'RXN0390'};
+{'RXN0392'};
+{'RXN0394'};
+{'RXN0395'};
+{'RXN0396'};
+{'RXN0397'};
+{'RXN0398'};
+{'RXN0399'};
+{'RXN0400'};
+{'RXN0401'};
+{'RXN0402'};
+{'RXN0403'};
+{'RXN0404'};
+{'RXN0405'};
+{'RXN0406'};
+{'RXN0407'};
+{'RXN0408'};
+{'RXN0409'};
+{'RXN0410'};
+{'RXN0411'};
+{'RXN0412'};
+{'RXN0413'};
+{'RXN0414'};
+{'RXN0415'};
+{'RXN0416'};
+{'RXN0417'};
+{'RXN0418'};
+{'RXN0419'};
+{'RXN0420'};
+{'RXN0421'};
+{'RXN0426'};
+{'RXN0428'};
+{'RXN0430'};
+{'RXN0431'};
+{'RXN0432'};
+{'RXN0433'};
+{'RXN0434'};
+{'RXN0435'};
+{'RXN0436'};
+{'RXN0437'};
+{'RXN0438'};
+{'RXN0441'};
+{'RXN0442'};
+{'RXN0443'};
+{'RXN0446'};
+{'RXN0447'};
+{'RXN0448'};
+{'RXN0449'};
+{'RXN0450'};
+{'RXN0451'};
+{'RXN0452'};
+{'RXN0453'};
+{'RXN0454'};
+{'RXN0455'};
+{'RXN0456'};
+{'RXN0457'};
+{'RXN0458'};
+{'RXN0459'};
+{'RXN0460'};
+{'RXN0461'};
+{'RXN0462'};
+{'RXN0463'};
+{'RXN0464'};
+{'RXN0465'};
+{'RXN0466'};
+{'RXN0467'};
+{'RXN0468'};
+{'RXN0469'};
+{'RXN0472'};
+{'RXN0473'};
+{'RXN0474'};];
+
+% Minimal DoF
+dof = 1;
+
+%% Functionalities
+f{1}.names = [{'RXN1391'}];
+f{1}.type = ['>'];
+f{1}.rhsValues = [0.5 * sol.f];
+
+%% Tolerance
+tol = 1e-06;
+
+% Number of wanted minimal Networks:
+number = 1;
+
+% fast version 
+fast = 0;
+
+% delete blocked reactions:
+use_F2C2 = 0;
+
+% BigM formulation:
+use_bigM = 1;
+
+% Reduce the network:
+requirements.n_functionalities = n_functionalities;
+requirements.prot_mets = prot_mets;
+requirements.prot_rxns = prot_rxns;
+requirements.dof = dof;
+requirements.f = f;
+requirements.tol = tol;
+requirements.number = number;
+requirements.fast = fast;
+requirements.use_F2C2 = use_F2C2;
+requirements.use_bigM = use_bigM;
+
+% get the model from the loaded struct
+fieldname = fieldnames(model);
+model = model.(fieldname{1});
+
+% compute the subnetworks
+subnetworks = reduce_model(model, requirements);
+

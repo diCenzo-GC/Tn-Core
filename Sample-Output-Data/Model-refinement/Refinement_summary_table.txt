@@ -1,0 +1,84 @@
+Reaction	Type_of_change	Original_GPR	New_GPR	Is_change_made_in_refined_model
+rxn00802_c0	GPR_modification	(smc00725 or smb21094)	(smc00725)	Yes
+rxn00952_c0	GPR_modification	(smc02217 or smc01809)	(smc02217)	Yes
+rxn08809_c0	GPR_modification	(smc04041 or smc02818)	(smc02818)	Yes
+rxn05341_c0	GPR_modification	(smc02522 or smc00778 or smc00264 or smb20871 or sma1629 or sma1398 or smc02037 or smc00372 or smc01157 or smc00136 or smc01571 or sma2019 or smc00572 or smc04391 or smc02041 or smb21474 or sma2165 or sma1367 or smb20210 or smc01991 or sma1629 or smc00268 or smc00880)	(smc00572)	Yes
+rxn10199_c0	GPR_modification	(smc02856 or sma1905 or smc00122 or sma2294 or smc01334 or smb21297)	(smc01334)	Yes
+rxn10806_c0	GPR_modification	(smb22024 or smb21487 or smb21489 or smb21488 or smc00188 or smc02463 or smc00187)	(smc00188 or smc02463 or smc00187)	Yes
+rxn10122_c0	GPR_modification	((smc01924 or sma1544) and (smc01925 or sma1538 or sma1541) and (smc01923 or sma1545) and (sma1535 or smc01927) and (smc01917 or sma1526 or smc01919) and (sma1516 or smc01921) and (smc01913 or sma1532) and (smc01922 or sma1519) and (sma1536 or smc01926) and (sma1525 or smc01918) and (smc01920 or sma1523) and (smc01914 or sma1531) and (sma1533 or smc01912) and (smc01915 or sma1529))	((smc01924) and (smc01925) and (smc01923) and (smc01927) and (smc01917) and (smc01921) and (smc01913) and (smc01922) and (smc01926) and (smc01918) and (smc01920) and (smc01914) and (smc01912) and (smc01915))	Yes
+rxn01200_c0	GPR_modification	((smc03978 or smb20200 or smc02342) or smc00269 or smc00270)	((smc03978))	Yes
+rxn05342_c0	GPR_modification	(smc02522 or smc00778 or smc00264 or smb20871 or sma1629 or sma1398 or smc02037 or smc00372 or smc01157 or smc00136 or smc01571 or sma2019 or smc00572 or smc04391 or smc02041 or smb21474 or sma2165 or sma1367 or smb20210 or smc01991 or sma1629 or smc00268 or smc00880)	(smc00572)	Yes
+rxn00910_c0	GPR_modification	(sma2143 or smc01843 or smc04340)	(smc01843)	Yes
+rxn00898_c0	GPR_modification	(smc04144 or smc04045)	(smc04045)	Yes
+rxn01069_c0	GPR_modification	(sma0485 or smc00077)	(smc00077)	Yes
+rxn00260_c0	GPR_modification	(smc04326 or smc01578 or smc00294 or smc00387 or smc02262 or smb20039 or smc01969 or smc04386)	(smc01578 or smc00294)	Yes
+rxn05337_c0	GPR_modification	(smc02522 or smc00778 or smc00264 or smb20871 or sma1629 or sma1398 or smc02037 or smc00372 or smc01157 or smc00136 or smc01571 or sma2019 or smc00572 or smc04391 or smc02041 or smb21474 or sma2165 or sma1367 or smb20210 or smc01991 or sma1629 or smc00268 or smc00880)	(smc00572)	Yes
+rxn08808_c0	GPR_modification	(smc04041 or smc02818)	(smc02818)	Yes
+rxn10113_c0	GPR_modification	(smb21488 or smb22024 or (Unknown and Unknown and Unknown and Unknown and Unknown and Unknown and Unknown and smc00187 and smc00188 and Unknown) or smb21487 or (Unknown and Unknown and Unknown and Unknown and smc02463) or smb21489)	((Unknown and Unknown and Unknown and Unknown and Unknown and Unknown and Unknown and smc00187 and smc00188 and Unknown) or (Unknown and Unknown and Unknown and Unknown and smc02463))	Yes
+rxn01477_c0	GPR_modification	(smc03068 or sma0235)	(smc03068)	Yes
+rxn09114_c0	GPR_modification	(smc02159 or smc00601)	(smc00601)	Yes
+rxn00085_c0	GPR_modification	((smc04026 or smc01814) and smc04028)	((smc04026) and smc04028)	Yes
+rxn05340_c0	GPR_modification	(smc02522 or smc00778 or smc00264 or smb20871 or sma1629 or sma1398 or smc02037 or smc00372 or smc01157 or smc00136 or smc01571 or sma2019 or smc00572 or smc04391 or smc02041 or smb21474 or sma2165 or sma1367 or smb20210 or smc01991 or sma1629 or smc00268 or smc00880)	(smc00572)	Yes
+rxn08799_c0	GPR_modification	(smc04041 or smc02818)	(smc02818)	Yes
+rxn05461_c0	GPR_modification	(smc02522 or smc00778 or smc00264 or smb20871 or sma1629 or sma1398 or smc02037 or smc00372 or smc01157 or smc00136 or smc01571 or sma2019 or smc00572 or smc04391 or smc02041 or smb21474 or sma2165 or sma1367 or smb20210 or smc01991 or sma1629 or smc00268 or smc00880)	(smc00572)	Yes
+rxn08312_c0	GPR_modification	(smc02157 or smc02096)	(smc02096)	Yes
+rxn00239_c0	GPR_modification	(smc00577 or smb21170)	(smc00577)	Yes
+rxn00763_c0	GPR_modification	(smc00105 or smc00680 or smc01816 or smc03929 or sma1296 or smc04270 or sma0263 or smc01582)	(smc04270)	Yes
+rxn00138_c0	GPR_modification	(smb20649 or smc00161)	(smc00161)	Yes
+rxn03884_c0	GPR_modification	(smc02043 or smc03153)	(smc03153)	Yes
+rxn08802_c0	GPR_modification	(smc04041 or smc02818)	(smc02818)	Yes
+rxn01602_c0	GPR_modification	((sma1326 or smc04173 or smc01442 or smc02439) or smc00603)	((smc01442))	Yes
+rxn01241_c0	GPR_modification	(smc02487 or smc03204 or smc01035)	(smc02487 or smc01035)	Yes
+rxn05336_c0	GPR_modification	(smc02522 or smc00778 or smc00264 or smb20871 or sma1629 or sma1398 or smc02037 or smc00372 or smc01157 or smc00136 or smc01571 or sma2019 or smc00572 or smc04391 or smc02041 or smb21474 or sma2165 or sma1367 or smb20210 or smc01991 or sma1629 or smc00268 or smc00880)	(smc00572)	Yes
+rxn02475_c0	GPR_modification	((smc01772 and smc01772) or smc02414)	((smc01772 and smc01772))	Yes
+rxn01485_c0	GPR_modification	(smb21081 or smc00637)	(smc00637)	Yes
+rxn00785_c0	GPR_modification	((smc03978 or smb20200 or smc02342) or smc00269 or smc00270)	((smc03978))	Yes
+rxn04954_c0	GPR_modification	(sma2143 or smc01843 or smc04340)	(smc01843)	Yes
+rxn00863_c0	GPR_modification	(sma0398 or smc02307)	(smc02307)	Yes
+rxn02159_c0	GPR_modification	(sma0398 or smc02307)	(smc02307)	Yes
+rxn01300_c0	GPR_modification	(sma1760 or smc00017)	(smc00017)	Yes
+rxn00881_c0	GPR_modification	(smc03994 or smb20362 or smb20159 or smb20150)	(smc03994)	Yes
+rxn00912_c0	GPR_modification	(smc01881 or smb20821)	(smc01881)	Yes
+rxn00692_c0	GPR_modification	(sma2135 or smc01770)	(smc01770)	Yes
+rxn00907_c0	GPR_modification	((smc03059 or smc02604) and (smc03059 or smc02604))	((smc03059) and (smc03059))	Yes
+rxn09562_c0	GPR_modification	(smc00577 or smb21170)	(smc00577)	Yes
+rxn00547_c0	GPR_modification	(smc02167 or smc02846 or smb21374 or smc02164)	(smc02164)	Yes
+rxn00102_c0	GPR_modification	(smc04083 or sma0045)	(smc04083)	Yes
+rxn00414_c0	GPR_modification	(smc01569 and (smb21227 or smc01215))	(smc01569 and (smc01215))	Yes
+rxn08801_c0	GPR_modification	(smc04041 or smc02818)	(smc02818)	Yes
+rxn01644_c0	GPR_modification	(sma0707 or smc02404 or smb20140 or smb21508 or smc03259)	(smc02404)	Yes
+rxn05339_c0	GPR_modification	(smc02522 or smc00778 or smc00264 or smb20871 or sma1629 or sma1398 or smc02037 or smc00372 or smc01157 or smc00136 or smc01571 or sma2019 or smc00572 or smc04391 or smc02041 or smb21474 or sma2165 or sma1367 or smb20210 or smc01991 or sma1629 or smc00268 or smc00880)	(smc00572)	Yes
+rxn05957_c0	GPR_modification	(smc02217 or smc01809)	(smc02217)	Yes
+rxn03513_c0	GPR_modification	(smc04285 or smc03190)	(smc03190)	Yes
+rxn01257_c0	GPR_modification	(smc04013 or smc02725 or smc02725)	(smc02725 or smc02725)	Yes
+rxn03535_c0	GPR_modification	(smc04302 or smc00731)	(smc04302)	Yes
+rxn01740_c0	GPR_modification	(smc02791 or smb20037)	(smc02791)	Yes
+rxn05338_c0	GPR_modification	(smc02522 or smc00778 or smc00264 or smb20871 or sma1629 or sma1398 or smc02037 or smc00372 or smc01157 or smc00136 or smc01571 or sma2019 or smc00572 or smc04391 or smc02041 or smb21474 or sma2165 or sma1367 or smb20210 or smc01991 or sma1629 or smc00268 or smc00880)	(smc00572)	Yes
+rxn00777_c0	GPR_modification	((smc01613 or smb20371) or smc00152)	(smc00152)	Yes
+rxn05289_c0	GPR_modification	(smc01224 or sma1890 or smc01159)	(smc01224)	Yes
+rxn01509_c0	GPR_modification	(smc00577 or smb21170)	(smc00577)	Yes
+rxn03951_c0	GPR_modification	(smb20772 or smb20146 or smc00580)	(smc00580)	Yes
+rxn08798_c0	GPR_modification	(smc04041 or smc02818)	(smc02818)	Yes
+rxn08797_c0	GPR_modification	(smc04041 or smc02818)	(smc02818)	Yes
+rxn01019_c0	GPR_modification	(sma0695 or smc02137)	(smc02137)	Yes
+rxn00686_c0	GPR_modification	((sma1326 or smc04173 or smc01442 or smc02439) or smc00603)	((smc01442))	Yes
+rxn00058_c0	GPR_modification	((sma0769 or sma1213 or sma0617) or smc01983 or (smc00009 or smb20174 or smb21368) or smc01985 or (smc00010 or smb21370) or (sma0766 or sma0615 or sma1216) or (sma0616 or sma1214 or sma0767) or (sma0765 or sma1220 or sma0612) or (smb21370 or smc00013) or smc01982 or smc03941 or smc01984)	((smc00009) or (smc00010) or (smc00013))	Yes
+rxn08619_c0	GPR_modification	(smc01222 or smc01221 or smc01220)	(smc01222 or smc01220)	Yes
+rxn08620_c0	GPR_modification	(smc01222 or smc01221 or smc01220)	(smc01222 or smc01220)	Yes
+rxn02160_c0	GPR_modification	(sma0483 or smc04042)	(smc04042)	Yes
+rxn08618_c0	GPR_modification	(smc01222 or smc01221 or smc01220)	(smc01222 or smc01220)	Yes
+rxn05328_c0	OR_to_AND_transition	(smc00005 or smc00326)	(smc00005 and smc00326)	No
+rxn05324_c0	OR_to_AND_transition	(smc00005 or smc00326)	(smc00005 and smc00326)	No
+rxn05322_c0	OR_to_AND_transition	(smc00005 or smc00326)	(smc00005 and smc00326)	No
+rxn00260_c0	OR_to_AND_transition	(smc01578 or smc00294)	(smc01578 and smc00294)	No
+rxn12224_c0	OR_to_AND_transition	(smc03804 or smc00316)	(smc03804 and smc00316)	No
+rxn10476_c0	OR_to_AND_transition	(smc00701 or smc00700)	(smc00701 and smc00700)	No
+rxn01241_c0	OR_to_AND_transition	(smc02487 or smc01035)	(smc02487 and smc01035)	No
+rxn05325_c0	OR_to_AND_transition	(smc00005 or smc00326)	(smc00005 and smc00326)	No
+rxn05323_c0	OR_to_AND_transition	(smc00005 or smc00326)	(smc00005 and smc00326)	No
+rxn01465_c0	OR_to_AND_transition	(smc01361 or smc02166)	(smc01361 and smc02166)	No
+rxn05326_c0	OR_to_AND_transition	(smc00005 or smc00326)	(smc00005 and smc00326)	No
+rxn05327_c0	OR_to_AND_transition	(smc00005 or smc00326)	(smc00005 and smc00326)	No
+rxn00058_c0	OR_to_AND_transition	((smc00009) or (smc00010) or (smc00013))	((smc00009) and (smc00010) and (smc00013))	No
+rxn05744_c0	OR_to_AND_transition	(smc00327 or smc00574 or smc01785 or smc04273)	(smc00327 and smc00574 and smc01785 and smc04273)	No
+rxn10030_c0	OR_to_AND_transition	(smc00327 or smc00574 or smc01785 or smc04273)	(smc00327 and smc00574 and smc01785 and smc04273)	No

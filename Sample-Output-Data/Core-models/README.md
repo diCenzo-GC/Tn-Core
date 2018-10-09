@@ -4,9 +4,7 @@ The Excel_models directory contains each of the models described below formatted
 
 The following models are included in this data set:
 - iGD1575_model: The starting version of the S. meliloti iGD1575 genome-scale metabolic model
-- iGD1575_refined_model: The Tn-Core refined version of the iGD1575_model genome-scale metabolic model
 - Draft_meliloti_model: A draft, fully automated S. meliloti genome-scale metabolic model prepared with KBase
-- Draft_meliloti_refined_model: The Tn-Core refined version of the Draft_meliloti_model genome-scale metabolic model
 - iGD726_model: The S. meliloti manually prepared core metabolic model iGD726
 - TnCore_model_1: The core model extracted from iGD1575_model using Tn-Core with Tn-seq data but without RNA-seq data
 - TnCore_model_2: The core model extracted from iGD1575_model using Tn-Core with Tn-seq data and with RNA-seq data, without re-introduction of highly expressed genes
@@ -15,4 +13,3 @@ The following models are included in this data set:
 - minNW_model: The core model extracted from iGD1575_model using a minNW-based pipeline adapted to deal with Tn-seq data
 - GIMME_model_1: The core model extracted from iGD1575_model using a GIMME-based pipeline adapted to deal with Tn-seq data
 - GIMME_model_2: The core model extracted form iGD1575_model using a GIMME-based pipeline using RNA-seq data
-- iPAE1146_TnCore_model: The core model extracted from the P. aeruginosa iPAE1146 genome-scale metabolic model, using Tn-Core with Tn-seq data but without RNA-seq data

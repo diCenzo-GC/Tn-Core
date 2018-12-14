@@ -15,7 +15,7 @@ function [modelNew] = tncore_duplicates(model)
 %   modelNew  The model lacking the duplicated genes.
 %
 % AUTHORS
-%   George diCenzo and Marco Fondi - 12/11/2018
+%   George diCenzo and Marco Fondi - 10/12/2018
 %
 
 %% Check a model is provided

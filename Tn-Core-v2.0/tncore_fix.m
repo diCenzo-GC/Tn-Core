@@ -15,7 +15,7 @@ function [modelNew] = tncore_fix(model)
 %   modelNew  The updated model.
 %
 % AUTHORS
-%   George diCenzo and Marco Fondi - 12/11/2018
+%   George diCenzo and Marco Fondi - 10/12/2018
 %
 
 %% Check a model is provided

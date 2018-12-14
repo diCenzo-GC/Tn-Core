@@ -16,7 +16,7 @@ function modelNew = tncore_remove_reactions(model, reactions)
 %               metabolites and genes also deleted.
 %
 % AUTHORS
-%   George diCenzo and Marco Fondi - 12/11/2018
+%   George diCenzo and Marco Fondi - 10/12/2018
 %
 
 %% Inputs

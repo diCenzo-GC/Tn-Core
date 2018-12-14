@@ -49,7 +49,7 @@ function [gene_states, genes, sol, tiger, weightStruct] = tncore_multiGIMME(tige
 %                   each species
 %
 % AUTHORS
-%   George diCenzo and Marco Fondi - 12/11/2018
+%   George diCenzo and Marco Fondi - 10/12/2018
 %
 
 %% Check input

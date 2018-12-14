@@ -78,7 +78,7 @@ function [coreGeneVar, coreRxnVar, coreGrowthVar, coreModel, ...
 % AUTHORS
 %   George diCenzo and Marco Fondi - 01/11/2017
 %   George diCenzo and Marco Fondi - updated - 06/04/2018
-%   George diCenzo and Marco Fondi - updated - 12/11/2018
+%   George diCenzo and Marco Fondi - updated - 10/12/2018
 %
 
 %% Check input variables

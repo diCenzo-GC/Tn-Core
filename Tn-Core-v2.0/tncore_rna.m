@@ -53,7 +53,7 @@ function [contextModel, reducedModel] = tncore_rna(model, rnaseq, ...
 %                   unnecessary 'Unknown' GPRs removed
 %
 % AUTHORS
-%   George diCenzo and Marco Fondi - 12/11/2018
+%   George diCenzo and Marco Fondi - 10/12/2018
 %
 
 %% Check input variables

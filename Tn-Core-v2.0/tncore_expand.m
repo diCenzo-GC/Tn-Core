@@ -25,7 +25,7 @@ function [expandedModel] = tncore_expand(coreModel, fullModel, deadends)
 %                   containing no dead-end metabolites.
 %
 % AUTHORS
-%   George diCenzo and Marco Fondi - 12/11/2018
+%   George diCenzo and Marco Fondi - 10/12/2018
 %
 
 %% Check inputs

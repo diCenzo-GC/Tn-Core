@@ -50,7 +50,7 @@ function [contextModel, reducedModel] = tncore_core(model, tnseq, epsilon, ...
 %
 % AUTHORS
 %   George diCenzo and Marco Fondi - 06/04/2018
-%   George diCenzo and Marco Fondi - updated - 12/11/2018
+%   George diCenzo and Marco Fondi - updated - 10/12/2018
 %
 
 %% Check input variables

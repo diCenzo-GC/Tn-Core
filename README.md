@@ -11,7 +11,7 @@ diCenzo GC, Mengoni A, Fondi M (2019) Tn-Core: a toolbox for integrating Tn-seq 
 
 Tn-Core is dependent on the following seven softwares/toolboxes. Please note that in the case of FASTCORE, it is necessary to download the original version of FASTCORE as Tn-Core is not compatible with the version provided in the COBRA Toolbox.
 
-1.    MATLAB. Available at: mathworks.com.
+1.    MATLAB. Available at: www.mathworks.com.
 2.    COBRA Toolbox. Available at: opencobra.github.io/cobratoolbox/stable
 3.    TIGER Toolbox version 1.2-beta. Available at: csbl.bitbucket.io/tiger/download.html
 4.    FASTCORE version 1.0. Available at: uni.lu/forschung/fstc/life_sciences_research_unit/research_areas/systems_biology/software/fastcore

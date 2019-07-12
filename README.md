@@ -14,7 +14,7 @@ Tn-Core is dependent on the following seven softwares/toolboxes. Please note tha
 1.    MATLAB. Available at: https://mathworks.com.
 2.    COBRA Toolbox. Available at: https://opencobra.github.io/cobratoolbox/stable
 3.    TIGER Toolbox version 1.2-beta. Available at: https://csbl.bitbucket.io/tiger/download.html
-4.    FASTCORE version 1.0. Available at: uni.lu/forschung/fstc/life_sciences_research_unit/research_areas/systems_biology/software/fastcore
-5.    libSBML. Available at: sourceforge.net/projects/sbml/files/libsbml
-6.    SBML Toolbox. Available at: sourceforge.net/projects/sbml/files/SBMLToolbox
-7.    iLOG CPLEX Studio (available at: www.ibm.com/products/ilog-cplex-optimization-studio) or the Gurobi solver (available at: gurobi.com).
+4.    FASTCORE version 1.0. Available at: https://uni.lu/forschung/fstc/life_sciences_research_unit/research_areas/systems_biology/software/fastcore
+5.    libSBML. Available at: https://sourceforge.net/projects/sbml/files/libsbml
+6.    SBML Toolbox. Available at: https://sourceforge.net/projects/sbml/files/SBMLToolbox
+7.    iLOG CPLEX Studio (available at: https://ibm.com/products/ilog-cplex-optimization-studio) or the Gurobi solver (available at: https://gurobi.com).

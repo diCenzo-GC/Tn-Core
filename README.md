@@ -12,9 +12,9 @@ diCenzo GC, Mengoni A, Fondi M (2019) Tn-Core: a toolbox for integrating Tn-seq 
 Tn-Core is dependent on the following seven softwares/toolboxes. Please note that in the case of FASTCORE, it is necessary to download the original version of FASTCORE as Tn-Core is not compatible with the version provided in the COBRA Toolbox.
 
 1.    MATLAB. Available at: mathworks.com.
-2.    COBRA Toolbox. Available at: opencobra.github.io/cobratoolbox/stable [10].
-3.    TIGER Toolbox version 1.2-beta. Available at: csbl.bitbucket.io/tiger/download.html [16].
-4.    FASTCORE version 1.0. Available at: uni.lu/forschung/fstc/life_sciences_research_unit/research_areas/systems_biology/software/fastcore [17].
-5.    libSBML. Available at: sourceforge.net/projects/sbml/files/libsbml [18].
-6.    SBML Toolbox. Available at: sourceforge.net/projects/sbml/files/SBMLToolbox [19].
+2.    COBRA Toolbox. Available at: opencobra.github.io/cobratoolbox/stable
+3.    TIGER Toolbox version 1.2-beta. Available at: csbl.bitbucket.io/tiger/download.html
+4.    FASTCORE version 1.0. Available at: uni.lu/forschung/fstc/life_sciences_research_unit/research_areas/systems_biology/software/fastcore
+5.    libSBML. Available at: sourceforge.net/projects/sbml/files/libsbml
+6.    SBML Toolbox. Available at: sourceforge.net/projects/sbml/files/SBMLToolbox
 7.    iLOG CPLEX Studio (available at: www.ibm.com/products/ilog-cplex-optimization-studio) or the Gurobi solver (available at: gurobi.com).

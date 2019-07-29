@@ -1,6 +1,6 @@
 # Tn-Core
 
-Tn-Core is Matlab toolbox for generation of gene-centric, context-specific core metabolic network reconstructions through integration of experimental Tn-seq and RNA-seq datasets. The most recent version of the toolbox is version 2.3, and can be found in the directory Tn-Core-v2.3.
+Tn-Core is Matlab toolbox for generation of gene-centric, context-specific core metabolic network reconstructions through integration of experimental Tn-seq and RNA-seq datasets. The last named version is version 2.3. As the toolbox will continue to be updated, and to avoid countless version numbers, each change will no longer be associated with a new version number. Instead, changes will be made in Tn-Core Toolbox version stored in the directory entitled *Most-Recent-Version*. When using this version of the toolbox, the commit number can be used to document the version of the toolbox used.
 
 Sample output data can be found in the Sample-Output-Data directory. Scripts used in the initial benchmarking of Tn-Core, along with the output data, are provided in the Benchmarking directory.
 
@@ -11,10 +11,10 @@ diCenzo GC, Mengoni A, Fondi M (2019) Tn-Core: a toolbox for integrating Tn-seq 
 
 Tn-Core is dependent on the following seven softwares/toolboxes. Please note that in the case of FASTCORE, it is necessary to download the original version of FASTCORE as Tn-Core is not compatible with the version provided in the COBRA Toolbox.
 
-1.    MATLAB. Available at: https://mathworks.com.
-2.    COBRA Toolbox. Available at: https://opencobra.github.io/cobratoolbox/stable
-3.    TIGER Toolbox version 1.2-beta. Available at: https://csbl.bitbucket.io/tiger/download.html
-4.    FASTCORE version 1.0. Available at: https://uni.lu/forschung/fstc/life_sciences_research_unit/research_areas/systems_biology/software/fastcore
-5.    libSBML. Available at: https://sourceforge.net/projects/sbml/files/libsbml
-6.    SBML Toolbox. Available at: https://sourceforge.net/projects/sbml/files/SBMLToolbox
-7.    iLOG CPLEX Studio (available at: https://ibm.com/products/ilog-cplex-optimization-studio) or the Gurobi solver (available at: https://www.gurobi.com).
+1.    [MATLAB](https://mathworks.com)
+2.    [COBRA Toolbox](https://opencobra.github.io/cobratoolbox/stable)
+3.    [TIGER Toolbox version 1.2-beta](https://csbl.bitbucket.io/tiger/download.html)
+4.    [FASTCORE version 1.0](https://uni.lu/forschung/fstc/life_sciences_research_unit/research_areas/systems_biology/software/fastcore)
+5.    [libSBML](https://sourceforge.net/projects/sbml/files/libsbml)
+6.    [SBML Toolbox](https://sourceforge.net/projects/sbml/files/SBMLToolbox)
+7.    [iLOG CPLEX Studio](https://ibm.com/products/ilog-cplex-optimization-studio) or the [Gurobi solver](https://www.gurobi.com)

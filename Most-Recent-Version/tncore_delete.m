@@ -19,6 +19,7 @@ function [modelNew] = tncore_delete(model)
 %   George diCenzo and Marco Fondi - 01/11/2017
 %   George diCenzo and Marco Fondi - updated - 12/04/2018
 %   George diCenzo and Marco Fondi - updated - 10/12/2018
+%   George diCenzo and Marco Fondi - updated - 16/01/2021
 %
 
 %% Check input
@@ -134,7 +135,7 @@ for n = 1:size(genesToDelete,1);
 end
 
 % Remove unwanted statements from grRules
-for m = 1:50
+for m = 1:100
     for n = 1:length(model.grRules);
         model.grRules{n} = strrep(model.grRules{n},'()','');
         model.grRules{n} = strrep(model.grRules{n},'  ',' ');

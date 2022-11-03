@@ -18,6 +18,7 @@ function [modelNew] = tncore_remove(model)
 %   George diCenzo and Marco Fondi - 01/11/2017
 %   George diCenzo and Marco Fondi - updated - 10/12/2018
 %   George diCenzo and Marco Fondi - updated - 25/03/2019
+%   George diCenzo - updated - 3/11/2022
 %
 
 %% Remove no longer existant genes
@@ -45,6 +46,17 @@ for n = 1:length(model.genes);
             x = x + 1;
             newNumber = strmatch(model.genes{n},genesNew,'exact');
             old = ['x(' num2str(n) ')'];
+            new = ['x(' cell2mat(genesNew(newNumber)) ')'];
+            rulesNew{m,1} = strrep(rulesNew{m,1},old,new);
+        end
+    end
+end
+for n = 1:length(model.genes);
+    for m = 1:length(model.rules);
+        if strfind(model.grRules{m},model.genes{n});
+            x = x + 1;
+            newNumber = strmatch(model.genes{n},genesNew,'exact');
+            old = ['x(' cell2mat(genesNew(newNumber)) ')'];
             new = ['x(' num2str(newNumber) ')'];
             rulesNew{m,1} = strrep(rulesNew{m,1},old,new);
         end
